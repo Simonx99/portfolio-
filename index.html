@@ -33,18 +33,18 @@
             <div class="nav__brand">Szymon Ciesielski</div>
             <button class="nav__hamburger" onclick="navOpen()"></button>
             <ul class="nav__list" id="nav__list">
-                <li class="nav__item"><a href="#home">home</a></li>
-                <li class="nav__item"><a href="#about">about</a></li>
-                <li class="nav__item"><a href="#work">work</a></li>
-                <li class="nav__item"><a href="#contact">contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#home">home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">about</a></li>
+                <li class="nav__item"><a class="nav__link" href="#work">work</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">contact</a></li>
             </ul>
         </div>
     </nav>
     <header id="home" class="header">
         <div class="header__container">
             <h1 class="header__h1">Hi there! I'm Szymon and that's my page <br/> I'm front-end developer and I'm avaible for hire</h1>
-            <button class="header__button">Check my work! <i class="fa fa-code" aria-hidden="true"></i>
-</button>
+            <a href="#work" class="header__button">Check my work!</a>
+
         </div>
     </header>
     <!-- END OF heder -->
@@ -68,13 +68,13 @@
                 </div>
 
                 <div class="abt__item">
-                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
-                    <h4 class="abt__h4">Exactitude</h4>
+                   <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <h4 class="abt__h4">Effective</h4>
                     <p class="abt__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
                 </div>
 
                 <div class="abt__item">
-                    <i class="fa fa-square-o" aria-hidden="true"></i>
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
 
                     <h4 class="abt__h4">Thinks out of box</h4>
                     <p class="abt__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
@@ -137,7 +137,7 @@
                 </div>
                 <div class="skls__item">
                     <div>
-                        <i class="devicon devicon-devicon-plain"></i>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
                         <h4 class="skls__h4">RWD and BEM</h4>
                         <p class="skls__description">RWD BEM AND OCCSS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
                     </div>
@@ -203,7 +203,7 @@
                 </div>
 
             </div>
-            <button class="prt__button">Look at the code on GitHub <i class="devicon-github-plain colored"></i></button>
+            <a href="https://github.com/Simonx99"class="prt__button">Look at the code on GitHub <i class="devicon-github-plain colored"></i></a>
         </div>
     </section>
     <!-- START OF opinion -->
@@ -216,14 +216,14 @@
             <h3 class="cntc__h3">Warsaw, Poland Tel: (+48) 519471337</h3>
                <h4 class="cntc__h4">sciesielski124@gmail.com</h4>
                 <!-- yeah working form on static website -->
-                <form class="cntc__form" action="https://formspree.io/sciesielski124@gmail.com" method="POST">>
+                <form class="cntc__form" action="https://formspree.io/sciesielski124@gmail.com" method="POST">
                     <div class="cntc__inputsgroup">
                         <input name="name" type="text" placeholder="Your Name*" class="form__name">
                         <input name="_replyto" type="email" placeholder="Your Email*" class="form__email">
                     </div>
-                    <br><br>
+                   
                     <textarea name="message" rows="10" cols="30" class="cntc__textarea" placeholder="Your Messenge*"></textarea>
-                    <button type="submit" value="Send" class="form__submit">SEND MESSENGE</button>
+                    <button type="submit" value="Send" class="form__submit">Send Messenge</button>
                 </form>
 
 
