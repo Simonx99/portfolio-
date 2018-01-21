@@ -1,166 +1,247 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!doctype html>
+<html lang="pl-PL">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Szymon Ciesielski - Front-End Developer" />
-    <meta name="keywords" content="portfolio,ui,design,web dev,dev,development" />
-    <meta name="author" content="Szymon Tymoteusz Ciesielski" />
-
-    <link rel="shortcut icon" href="/IMG/favicon.ico" type="image">
-    <link rel="icon" href="IMG/favicon.ico" type="image/x-icon">
-    <title>Portfolio - Szymon Ciesielski</title>
-    <!--  CSS -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="CSS/style.css" type="text/css">
-    <!-- FONTS -->
-    <!-- META -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <!-- fonty -->
+    <link rel="shortcut icon" href="/IMG/favicon%20(x).ico" type="image">
+    <link rel="icon" href="IMG/favicon%20(x).ico" type="image/x-icon">
+    <link href="CSS/style.css" rel="stylesheet">
+    <meta name="theme-color" content="#643a79">
+    <meta charset="utf-8" />
+    <meta name="description" content="Portfolio of great junior developer" />
+    <meta name="keywords" content="portfolio,ui,design,web dev,dev,development" />
+    <!-- tagi -->
+    <meta name="author" content="Szymon Ciesielski" />
     <meta htttp-equiv="X-UA_Compatible" content="IE=edgde,chrome=1">
-    <!-- VIEVPORT -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
-
+    <!-- kompatybilność wsteczna -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Szymon Ciesielski - Front-End Developer</title>
 </head>
 
-<body>
+<body class="body">
+
+    <!-- START OF header -->
 
 
     <nav class="nav">
-        <div class="nav-logo">
-            <p id="icon" style="text-shadow: rgb(68, 68, 68) 0px 0px 0px, rgb(69, 69, 69) 1px 1px 0px, rgb(70, 70, 70) 2px 2px 0px, rgb(70, 70, 70) 3px 3px 0px, rgb(71, 71, 71) 4px 4px 0px, rgb(72, 72, 72) 5px 5px 0px, rgb(73, 73, 73) 6px 6px 0px, rgb(74, 74, 74) 7px 7px 0px, rgb(75, 75, 75) 8px 8px 0px, rgb(75, 75, 75) 9px 9px 0px, rgb(76, 76, 76) 10px 10px 0px, rgb(77, 77, 77) 11px 11px 0px, rgb(78, 78, 78) 12px 12px 0px, rgb(79, 79, 79) 13px 13px 0px, rgb(80, 80, 80) 14px 14px 0px, rgb(80, 80, 80) 15px 15px 0px, rgb(81, 81, 81) 16px 16px 0px, rgb(82, 82, 82) 17px 17px 0px, rgb(83, 83, 83) 18px 18px 0px, rgb(84, 84, 84) 19px 19px 0px, rgb(85, 85, 85) 20px 20px 0px, rgb(85, 85, 85) 21px 21px 0px, rgb(86, 86, 86) 22px 22px 0px, rgb(87, 87, 87) 23px 23px 0px, rgb(88, 88, 88) 24px 24px 0px, rgb(89, 89, 89) 25px 25px 0px, rgb(90, 90, 90) 26px 26px 0px, rgb(90, 90, 90) 27px 27px 0px, rgb(91, 91, 91) 28px 28px 0px, rgb(92, 92, 92) 29px 29px 0px, rgb(93, 93, 93) 30px 30px 0px, rgb(94, 94, 94) 31px 31px 0px, rgb(95, 95, 95) 32px 32px 0px, rgb(95, 95, 95) 33px 33px 0px, rgb(96, 96, 96) 34px 34px 0px; font-size: 35px; color: rgb(22, 225, 189); height: 61px; width: 61px; line-height: 61px; border-radius: 0%; text-align: center; background-color: rgb(97, 97, 97);overflow: hidden;">SC</p>
+        <div class="nav__container">
+            <div class="nav__brand">Ciesielski</div>
+            <button class="nav__hamburger" onclick="navOpen()"></button>
+            <ul class="nav__list" id="nav__list">
+                <li class="nav__item"><a href="#home">home</a></li>
+                <li class="nav__item"><a href="#about">about</a></li>
+                <li class="nav__item"><a href="#work">work</a></li>
+                <li class="nav__item"><a href="#contact">contact</a></li>
+            </ul>
         </div>
-        <button class="nav-hamburger" onclick="showmenu()"></button>
-        <ul class="nav-list" id="nav-list">
-            <li class="nav-item"><a href="#abt">Home</a></li>
-            <li class="nav-item"><a href="#skls">Skills</a></li>
-            <li class="nav-item"><a href="#prjc">Projects</a></li>
-            <li class="nav-item"><a href="#cntc">Contact</a></li>
-        </ul>
     </nav>
-    <header class="home gradient">
-        <div class="home-container margin-0-a">
-            <img src="IMG/awesome-man.png" alt="my photo" class="img-responsive img-maxwidth">
-            <h1 class="h1-framed">Hello</h1>
-
-            <h2 class="h2-framed">I'm Szymon</h2>
+    <header id="home" class="header">
+        <div class="header__container">
+            <h1 class="header__h1">Hi there! I'm Szymon and that's my page <br/> I'm front-end developer and I'm avaible for hire</h1>
+            <button class="header__button">Check my work!</button>
         </div>
-        <div class="home-container margin-0-a">
-            <p class="p-framed">Pasjonat czegos tam robi to to i to toto africa, kfc, hotel ? trivago</p>
-            <p class="p-framed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-
-
-
-        <button><a href="#abt">Scroll Down</a></button>
-        </section>
     </header>
-    <section class="abt">
-        <h1>About</h1>
-        <p class="p-framed">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </p>
-        <h2>My achievements</h2>
-        <p p-framed>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <!-- END OF heder -->
+    <!-- START OF main -->
+
+    <!-- START OF services -->
+    <section id="about" class="abt">
+
+        <div class="abt__container">
+            <h1 class="abt__h2">Some words about me</h1>
+            <hr class="abt__hr">
+            <h3 class="abt__h3">We are working with both individuals and businesses from all over the globe <br/>to create awesome websites and applications.</h3>
+
+            <!-- main services grid -->
+            <div class="abt__grid">
+                
+                <div class="abt__item">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                    <h2 class="services__h4">Willingness to learn</h2>
+                    <h4 class="services__h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h4>
+                </div>
+
+                <div class="abt__item">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                    <h2 class="services__h4">Exactitude</h2>
+                    <h4 class="services__h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h4>
+                </div>
+
+                <div class="abt__item">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                    <h2 class="services__h4">Branding</h2>
+                    <h4 class="services__h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h4>
+                </div>
+
+                <div class="abt__item">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                    <h2 class="services__h4">I do not give up</h2>
+                    <h4 class="services__h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h4>
+                </div>
 
 
 
+                <!-- development -->
+
+            </div>
+        </div>
     </section>
+
+
+
+    <!-- START OF skills -->
     <section class="skls">
-        <h1>Skills</h1>
-        <div class="container">
-            <div>
-                <i class="devicon-html5-plain-wordmark"></i>
-                <p>HTML5</p>
+       <div class="skls__container">
+        <h1 class="skls__h2">I GOT SKILLS!</h1>
+        <hr class="skls__hr">
+        <h3 class="skls__h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+        <div class="skls__grid">
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-html5-plain"></i>
+                    <h4 class="skls__h4">HTML5</h4>
+                    <p class="skls__description">HTML5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum. Praesent est neque, finibus a dui in, maximus vestibulum ex. Pellentesque tempus nunc efficitur tellus auctor, et laoreet sapien lobortis. Praesent molestie posuere ex, eget dignissim ante accumsan sed. Aliquam rutrum tortor a dictum lobortis. Praesent condimentum vehicula auctor.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-css3-plain-wordmark"></i>
-                <p>CSS3</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-css3-plain"></i>
+                    <h4 class="skls__h4">CSS3</h4>
+                    <p class="skls__description">CSS3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum. Praesent est neque, finibus a dui in, maximus vestibulum ex. Pellentesque tempus nunc efficitur tellus auctor, et laoreet sapien lobortis. Praesent molestie posuere ex, eget dignissim ante accumsan sed. Aliquam rutrum tortor a dictum lobortis. Praesent condimentum vehicula auctor.</p>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-javascript-plain"></i>
-                <p>JS</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-javascript-plain"></i>
+                    <h4 class="skls__h4">JavaScript</h4>
+                    <p class="skls__description">JS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-bootstrap-plain-wordmark"></i>
-                <p>Bootstrap</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-bootstrap-plain"></i>
+                    <h4 class="skls__h4">Bootstrap</h4>
+                    <p class="skls__description">Bootstrap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-devicon-plain"></i>
-                <p>RWD BEM AND OCCSS</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-devicon-plain"></i>
+                    <h4 class="skls__h4">RWD, BEM AND OCCSS</h4>
+                    <p class="skls__description">RWD BEM AND OCCSS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-photoshop-plain"></i><i class="devicon-gimp-plain"></i>
-                <p>PSD2HTML</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon-photoshop-plain"></i><i class="devicon-gimp-plain"></i>
+                    <h4 class="skls__h4">PSD to HTML</h4>
+                    <p class="skls__description">PSD2HTML Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-                <i class="devicon-sass-original"></i>
-                <p>Sass</p>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-sass-original"></i>
+                    <h4 class="skls__h4">Sass</h4>
+                    <p class="skls__description">Sass Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                </div>
+                <!-- copy as many need -->
             </div>
-            <!-- copy as many need -->
-        </div>
-        <div class="container">
-            <div>
-            </div><i class="devicon-react-original-wordmark"></i>
+            <div class="skls__item">
+                <div>
+                    <i class="devicon devicon-react-original-wordmark"></i>
 
-            <p>React</p>
-            <!-- copy as many need -->
-        </div>
-    </section>
-    <section class="prjc">
-        <h1>Projects</h1>
-        <div class="">
-            <div><img src="" alt=""><img src="http://via.placeholder.com/350x150"><button>Live</button><button>Repo</button>
-                <p>Name 1</p>
-                <p>Opis sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            </div>
-            <div><img src="" alt=""><img src="http://via.placeholder.com/350x150"><button>Live</button><button>Repo</button>
-                <p>Name 2</p>
-                <p>Opis sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            </div>
-            <div><img src="" alt=""><img src="http://via.placeholder.com/350x150"><button>Live</button><button>Repo</button>
-                <p>Name 3</p>
-                <p>Opis sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            </div>
-            <div><img src="" alt=""><img src="http://via.placeholder.com/350x150"><button>Live</button><button>Repo</button>
-                <p>Name 4</p>
-                <p>Opis sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            </div>
-            <div><a href="">Github</a></div>
-        </div>
 
+                    <p class="skls__description">React Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales ipsum. Etiam eleifend est in ligula commodo posuere. Aenean ut scelerisque odio, porttitor suscipit erat. Nulla volutpat justo sed ipsum maximus vestibulum.</p>
+                    <!-- copy as many need -->
+                </div>
+            </div>
+        </div>
+</div>
 
     </section>
-    <section class="cntc">
-        <h1>Contact</h1>
-        <p>Feel free to contact me </p>
-        <p>sciesielski124@gmail.com</p>
-        <p>+48519471337</p>
+    <!-- START OF portfolio -->
+    <section id="work" class="prt">
+        <div class="prt__container">
+            <h1 class="prt__h2">MY PORTFOLIO</h1>
+            <hr class="prt__hr">
+            <h2 class="prt__h3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet<br/>consectetur, adipisci velit, sed quia non numquam</h2>
+           
+
+            <div class="prt__box">
+                <div class="prt__module">
+                    <div class="prt__logo"><img src="IMG/lap.png" class="portfolio__project_img"></div>
+                    <h3 class="prt__h3">Isometric Perspective Mock-Up</h3>
+                </div>
+                <div class="prt__module">
+                    <div class="prt__logo"><img src="IMG/lap.png" class="portfolio__project_img"></div>
+                    <h3 class="prt__h3">Time Zone App UI</h3>
+                </div>
+                <div class="prt__module">
+                    <div class="prt__logo"><img src="IMG/slices/lap3.png" class="portfolio__project_img"></div>
+                    <h3 class="prt__h3">Viro Media Players UI</h3>
+                </div>
+                <div class="prt__module">
+                    <div class="prt__logo"><img src="IMG/lap.png" class="portfolio__project_img"></div>
+                    <h3 class="prt__h3">Blog / Magazine Flat UI Kit</h3>
+                </div>
+                 <div class="prt__module">
+                    <div class="prt__logo"><img src="IMG/lap.png" class="portfolio__project_img"></div>
+                    <h3 class="prt__h3">Blog / Magazine Flat UI Kit</h3>
+                </div>
+            </div>
+            <button class="prt__button">Look at the code</button>
+        </div>
+    </section>
+    <!-- START OF opinion -->
+
+    <!-- START OF FOOTER -->
+    <section class="cntc" id="contact">
+        <div class="cntc__container">
+            <h1 class="cntc__h2">GET IN TOUCH</h1>
+            <hr class="cntc__hr">
+            <h2 class="cntc__h3">Warsaw, Poland Tel: (+48) 519471337</h2>
+            <!-- yeah working form on static website -->
+            <form class="cntc__form" action="/https://formspree.io/sciesielski@gmail.com" method="post">
+                <div class="cntc__wrapper">
+                    <input name="name" type="text" placeholder="Your Name*" class="form__name">
+                    <input name="email" type="email" placeholder="Your Email*" class="form__email">
+                </div>
+                <br><br>
+                <textarea name="message" rows="10" cols="30" class="footer__text_area" placeholder="Your Messenge*"></textarea>
+                <button type="submit" value="send" class="form__submit">SEND MESSENGE</button>
+            </form>
 
 
+        </div>
     </section>
     <footer class="footer">
-        <p>Made by S I M O N<span> with <span>Passion</span></span>
-        </p>
+        <ul class="footer__list">
+            <div class="list__wrapper">
+                <li class="footer__link"><a href="index.html">Facebook</a></li>
+
+
+                <li class="footer__link"><a href="index.html">LinkedIn</a></li>
+
+
+                <li class="footer__link"><a href="index.html">GitHub</a></li>
+
+            </div>
+        </ul>
+
+        <!-- END OF footer  -->
+
     </footer>
+    <!--script  -->
     <script src="JS/script.js" type="text/javascript"></script>
 </body>
-
 
 </html>

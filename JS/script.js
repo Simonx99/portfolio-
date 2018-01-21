@@ -1,8 +1,10 @@
-function showmenu() {
-    var x = document.getElementById("nav-list");
-    if (x.classList.contains ("nav-list--active")) {
-        x.classList.remove("nav-list--active");
-    } else {
-         x.classList.add("nav-list--active");
-    }
+function navOpen() {
+  var nav = document.getElementById('nav__list');
+  if (nav.classList.contains('nav__list--active')) {
+    nav.classList.remove('nav__list--active');
+    console.log('removed class');
+  } else {
+    nav.classList.add('nav__list--active');
+    console.log('added class')
+  }
 }
