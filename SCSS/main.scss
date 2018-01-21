@@ -1,10 +1,6 @@
 @import "reset.scss";
-/** body
-    body
-    body
-**/
 
-a:default,
+a,
 a:link,
 a:visited {
     color: white;
@@ -81,7 +77,7 @@ $xxl: 1199.98px;
 
 .nav {
     display: block;
-z-index: 333;
+    z-index: 333;
     margin-top: 0;
     top: 0;
     background-color: #87509c;
@@ -97,7 +93,7 @@ z-index: 333;
     height: 60px;
     display: flex;
     justify-content: flex-start;
-    
+
 }
 
 .nav__hamburger {
@@ -139,7 +135,7 @@ z-index: 333;
 
 .nav__list {
     color: white;
-  
+
     width: 100%;
     height: auto;
     top: 0px;
@@ -147,25 +143,21 @@ z-index: 333;
     position: relative;
     height: 0;
     display: none;
-    
- 
+
+
 }
 
 .nav__list--active {
     transform: translateX(0);
     display: block;
-    height: 150px;
-  
-     // animation: slide 1s ease 3.5s forwards;
-    
+    height: 150px; // animation: slide 1s ease 3.5s forwards;
 }
 
 
 //@-prefix-keyframes slide {
- // from {height: 0;}
+// from {height: 0;}
 //  to {height: 300px;}
 //}
-
 .nav__item {
     text-align: center;
     font-size: 3em;
@@ -202,7 +194,7 @@ z-index: 333;
     background-color: #87509c;
     padding-top: 120px;
     padding-bottom: 60px;
-    min-height: 80vh;
+    min-height: 60vh;
 }
 
 .header__container {
@@ -257,7 +249,7 @@ z-index: 333;
 
 %btn {
     height: 66px;
-     font-size: 1.5em;
+    font-size: 1.5em;
     font-weight: bolder;
     text-align: center;
     margin: 0 auto;
@@ -298,6 +290,7 @@ z-index: 333;
 
 .abt {
     background-color: #17c2a4;
+    color: white;
 }
 
 .abt__container {
@@ -377,7 +370,8 @@ z-index: 333;
     text-align: center;
 
 
-    color: #3c4761; color: white;
+    color: #3c4761;
+    color: white;
 }
 
 .skls__hr {
@@ -385,11 +379,13 @@ z-index: 333;
 }
 
 .skls__h4 {
-    @extend %h4; color: white;
+    @extend %h4;
+    color: white;
 }
 
 .skls__h5 {
-    @extend %h5; color: white;
+    @extend %h5;
+    color: white;
 }
 
 .skls__grid {
@@ -424,7 +420,7 @@ z-index: 333;
     font-weight: bolder;
     text-align: center;
     padding-top: 50px;
-    
+
 }
 
 .prt__h3 {
@@ -449,11 +445,13 @@ z-index: 333;
 .prt__grid {
     padding-top: 30px;
     display: grid;
-  
+
     grid-template-rows: 1fr;
 }
 
-.prt__item {margin: 1px;}
+.prt__item {
+    margin: 1px;
+}
 
 .prt__img {
     height: auto;
@@ -470,7 +468,7 @@ z-index: 333;
 
 
     box-shadow: 0px 4px #14a58c;
-    
+
 
 }
 
@@ -516,7 +514,7 @@ z-index: 333;
 input[type=text],
 input[type=email] {
     width: 100%;
- font-size: 1.6em;
+    font-size: 1.6em;
     margin-bottom: 28px;
     border: none;
     height: 56px;
@@ -563,9 +561,9 @@ button[type=submit] {
     border-radius: 2px;
     color: white;
     border: none;
-   
-   
-  
+
+
+
 }
 
 
@@ -630,14 +628,17 @@ button[type=submit] {
     }
     .abt__item {
         width: 50%;
-        
+
     }
-    .cntc__inputsgroup{
+    .cntc__inputsgroup {
         flex-direction: row;
     }
-    input:first-child{
-    margin-right: 14px}
-    input:last-child{margin-left: 14px}
+    input:first-child {
+        margin-right: 14px
+    }
+    input:last-child {
+        margin-left: 14px
+    }
 }
 
 
@@ -671,13 +672,13 @@ button[type=submit] {
     }
     .nav__brand {
         float: left;
-       
+
     }
     .nav__list {
         display: flex;
         justify-content: flex-start;
         float: right;
-       
+
         width: auto;
         background-color: transparent;
         position: static;
@@ -688,23 +689,29 @@ button[type=submit] {
         margin-left: 10px;
         margin-top: 15px;
         border: none;
-       
+
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
 
     }
-    a.nav__link{padding-left: 6px; padding-right: 6px; border-radius: 4px;}
-    a.nav__link:hover{
-        
-        background-color: #643a79; 
-       
+    a.nav__link {
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 4px;
     }
-    .footer__list{
+    a.nav__link:hover {
+
+        background-color: #643a79;
+
+    }
+    .footer__list {
         flex-direction: row;
-      
+
     }
-    .footer__link{width: 50%;}
+    .footer__link {
+        width: 50%;
+    }
 }
 
 @media (min-width:$xxl) {}
