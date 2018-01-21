@@ -306,7 +306,7 @@ flex-direction: column;}
 **/
 
 .skls {
-    background-color: #e7f1f8;
+    background-color: #d74680;
 }
 
 .skls__container {
@@ -418,10 +418,10 @@ flex-direction: column;}
 
 .prt__button {
     @extend %btn;
-
+margin-top: 24px;
     background-color: #17c2a4;
     color: white;
-    position: relative;
+    
     
     box-shadow: 0px 4px #14a58c;
     font-size: 1.5em;
@@ -430,6 +430,7 @@ flex-direction: column;}
 
 .cntc {
     background-color: #3c5499;
+        padding-bottom: 24px;
 }
 
 .cntc__container {
@@ -496,6 +497,7 @@ button[type=submit] {
     /* border-radius: 3px; */
     /* border: none; */
     box-shadow: 0 4px #299ec5;
+    margin-top: 16px;
 
 }
 
@@ -602,18 +604,30 @@ a {
 }
 
 //grids
-@media screen and(min-width:$md) {}
+@media screen and(min-width:$md) {
+    .abt__grid{
+        flex-direction: row;flex-wrap:wrap;
+    }
+    .skls__grid{flex-direction: row;
+    flex-wrap:wrap;}
+    .skls__item{width: 50%;}
+    .abt__item{width: 50%;}
+}
+
 
 @media screen and (min-width:$lg) {
     .abt__grid {
         flex-direction: row;
+        flex-wrap: nowrap;
     }
     .skls__grid{
         flex-direction: row;
         flex-wrap: wrap;
     }
     .skls__item{width: 25%;}
+    .abt__item{width: auto;}
     .prt__grid{grid-template-columns: 1fr 1fr;}
+    
     .prt__item{;}
 }
 
