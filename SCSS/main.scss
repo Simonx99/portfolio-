@@ -1,45 +1,21 @@
 @import "reset.scss";
-
-a,
-a:link,
-a:visited {
-    color: white;
-}
-
-a:hover {
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
 .active__color:visited {
     color: #30BAE7;
 }
-
 .body {
     overflow-x: hidden;
     font-size: 10px;
     font-family: 'Titillium Web', sans-serif;
 }
-
-::selection {
-    background-color: #643a79;
-    color: white;
-}
-
 %container {
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 }
-
 %container-fluid {
     width: 100%;
 }
-
 //containers
 $xs: 250px;
 $sm: 320px;
@@ -52,29 +28,37 @@ $xxl: 1199.98px;
         max-width: 540px;
     }
 }
-
 @media (min-width: $sm) {
     %container {
         max-width: 720px;
     }
 }
-
 @media (min-width: $xl) {
     %container {
         max-width: 1146px;
     }
 }
-
 @media (min-width: $xxl) {
     %container {
         max-width: 1146px;
     }
 }
-
-.nav__container {
-    @extend %container;
+a,
+a:link,
+a:visited {
+    color: white;
+}
+a:hover {
+    color: white;
 }
 
+a {
+    text-decoration: none;
+}
+/** nav
+    nav
+    nav
+**/
 .nav {
     display: block;
     z-index: 333;
@@ -84,7 +68,9 @@ $xxl: 1199.98px;
     position: fixed;
     width: 100%;
 }
-
+.nav__container {
+    @extend %container;
+}
 .nav__brand {
     color: white;
     padding-top: 8px;
@@ -93,9 +79,7 @@ $xxl: 1199.98px;
     height: 60px;
     display: flex;
     justify-content: flex-start;
-
 }
-
 .nav__hamburger {
     width: 30px;
     height: 30px;
@@ -116,7 +100,6 @@ $xxl: 1199.98px;
     right: 5px;
     z-index: 34;
 }
-
 .nav__hamburger::after,
 .nav__hamburger::before {
     content: '';
@@ -128,14 +111,11 @@ $xxl: 1199.98px;
     transform: translateY(5px);
     transition: 0.15s transform linear;
 }
-
 .nav__hamburger::after {
     transform: translateY(15px);
 }
-
 .nav__list {
     color: white;
-
     width: 100%;
     height: auto;
     top: 0px;
@@ -143,21 +123,12 @@ $xxl: 1199.98px;
     position: relative;
     height: 0;
     display: none;
-
-
 }
-
 .nav__list--active {
     transform: translateX(0);
     display: block;
     height: 150px; // animation: slide 1s ease 3.5s forwards;
 }
-
-
-//@-prefix-keyframes slide {
-// from {height: 0;}
-//  to {height: 300px;}
-//}
 .nav__item {
     text-align: center;
     font-size: 3em;
@@ -175,21 +146,10 @@ $xxl: 1199.98px;
     background-color: #643a79;
 }
 
-/** site
-    site
-    site
-**/
-
-/** nav
-    nav
-    nav
-**/
-
 /** header
     header
     header
 **/
-
 .header {
     background-color: #87509c;
     padding-top: 120px;
@@ -200,7 +160,6 @@ $xxl: 1199.98px;
 .header__container {
     @extend %container;
 }
-
 %h1 {
     font-size: 3.5em;
     line-height: 130%;
@@ -213,28 +172,24 @@ $xxl: 1199.98px;
     font-weight: bolder;
     padding-top: 30px;
 }
-
 %h3 {
     font-size: 2.9em;
     line-height: 130%;
     font-weight: 400;
     padding-top: 30px;
 }
-
 %h4 {
     font-size: 2.6em;
     line-height: 130%;
     font-weight: 400;
     padding-top: 30px;
 }
-
 %h5 {
     font-size: 2.4em;
     line-height: 130%;
     font-weight: 300;
     padding-top: 30px;
 }
-
 %h6 {}
 
 %hr {
@@ -246,7 +201,6 @@ $xxl: 1199.98px;
     margin-top: 22px;
     margin-bottom: 22px;
 }
-
 %btn {
     height: 66px;
     font-size: 1.5em;
@@ -261,33 +215,21 @@ $xxl: 1199.98px;
     max-width: 293px;
     line-height: 66px;
 }
-
-
 .header__h1 {
     @extend %h1;
     text-align: center;
     color: white;
-
 }
-
 .header__button {
     @extend %btn;
     margin-top: 60px;
-
-
     background-color: #eb7d4b;
     color: white;
-
-
-
-
 }
-
 /** abt
     abt
     abt
 **/
-
 .abt {
     background-color: #17c2a4;
     color: white;
@@ -306,12 +248,10 @@ $xxl: 1199.98px;
     @extend %h2;
     text-align: center;
 }
-
 /** services
     services
     services
 **/
-
 .abt__h3 {
     @extend %h3;
     text-align: center;
@@ -328,14 +268,10 @@ $xxl: 1199.98px;
 .abt__hr {
     @extend %hr;
 }
-
-
-
 /** skills
     skills
     skills
 **/
-
 .skls {
     background-color: #d74680;
     color: white;
@@ -349,8 +285,6 @@ $xxl: 1199.98px;
     @extend %h2;
     color: #3c4761;
     color: white;
-
-
     text-align: center;
 }
 
@@ -368,8 +302,6 @@ $xxl: 1199.98px;
 .skls__h3 {
     @extend %h3;
     text-align: center;
-
-
     color: #3c4761;
     color: white;
 }
@@ -408,7 +340,6 @@ $xxl: 1199.98px;
 .prt {
     background-color: #ffdd99;
     padding-bottom: 60px;
-
 }
 
 .prt__container {
@@ -445,7 +376,6 @@ $xxl: 1199.98px;
 .prt__grid {
     padding-top: 30px;
     display: grid;
-
     grid-template-rows: 1fr;
 }
 
@@ -465,11 +395,7 @@ $xxl: 1199.98px;
     margin-top: 24px;
     background-color: #17c2a4;
     color: white;
-
-
     box-shadow: 0px 4px #14a58c;
-
-
 }
 
 .cntc {
@@ -485,7 +411,6 @@ $xxl: 1199.98px;
 .cntc__h2 {
     @extend %h2;
     text-align: center;
-
 }
 
 .cntc__h3 {
@@ -506,11 +431,9 @@ $xxl: 1199.98px;
 
 .cntc__inputsgroup {
     margin-top: 8px;
-
     display: flex;
     flex-direction: column;
 }
-
 input[type=text],
 input[type=email] {
     width: 100%;
@@ -521,20 +444,12 @@ input[type=email] {
     border-radius: 2px;
     color: white;
     background-color: #273a71;
-
-
     text-indent: 26px;
 }
-
-
-
-
-
 input::placeholder,
 textarea::placeholder {
     color: white;
 }
-
 button[type=submit] {
     @extend %btn;
     background-color: #30bae7;
@@ -545,11 +460,7 @@ button[type=submit] {
     /* border: none; */
     box-shadow: 0 4px #299ec5;
     margin-top: 16px;
-
 }
-
-
-
 .cntc__textarea {
     font-size: 1.6em;
     background-color: #273a71;
@@ -561,58 +472,31 @@ button[type=submit] {
     border-radius: 2px;
     color: white;
     border: none;
-
-
-
 }
-
-
-
 /** footer
     footer
     footer
 **/
-
 .footer {
     min-height: 60px;
     background-color: #344b8e;
     padding-bottom: 6px;
-
-
-
 }
-
-
-
-
-
-
-
-
-
 .footer__container {
     @extend %container-fluid;
 }
-
-
-
 .footer__list {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #344b8e;
 }
-
-
-
 .footer__link {
-
     margin-top: 22px;
     text-align: center;
     font-size: 2.2em;
     background-color: #344b8e
 }
-
 //grids
 @media screen and(min-width:$md) {
     .abt__grid {
@@ -628,7 +512,6 @@ button[type=submit] {
     }
     .abt__item {
         width: 50%;
-
     }
     .cntc__inputsgroup {
         flex-direction: row;
@@ -640,8 +523,6 @@ button[type=submit] {
         margin-left: 14px
     }
 }
-
-
 @media screen and (min-width:$lg) {
     .abt__grid {
         flex-direction: row;
@@ -660,25 +541,18 @@ button[type=submit] {
     .prt__grid {
         grid-template-columns: 1fr 1fr;
     }
-
-    .prt__item {
-        ;
-    }
 }
-
 @media (min-width:$xl) {
     .nav__hamburger {
         display: none;
     }
     .nav__brand {
         float: left;
-
     }
     .nav__list {
         display: flex;
         justify-content: flex-start;
         float: right;
-
         width: auto;
         background-color: transparent;
         position: static;
@@ -689,11 +563,9 @@ button[type=submit] {
         margin-left: 10px;
         margin-top: 15px;
         border: none;
-
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
-
     }
     a.nav__link {
         padding-left: 6px;
@@ -701,17 +573,17 @@ button[type=submit] {
         border-radius: 4px;
     }
     a.nav__link:hover {
-
         background-color: #643a79;
-
     }
     .footer__list {
         flex-direction: row;
-
     }
     .footer__link {
         width: 50%;
     }
 }
-
 @media (min-width:$xxl) {}
+::selection {
+    background-color: #643a79;
+    color: white;
+}
