@@ -1,23 +1,26 @@
 @import "reset.scss";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 .active__color:visited {
     color: #30BAE7;
 }
+
 .body {
     overflow-x: hidden;
     font-size: 10px;
-   font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
+
 %container {
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+
 %container-fluid {
     width: 100%;
 }
-//containers
+
+//for media
 $xs: 250px;
 $sm: 320px;
 $md: 575.98px;
@@ -29,26 +32,31 @@ $xxl: 1199.98px;
         max-width: 540px;
     }
 }
+
 @media (min-width: $sm) {
     %container {
         max-width: 720px;
     }
 }
+
 @media (min-width: $xl) {
     %container {
         max-width: 1146px;
     }
 }
+
 @media (min-width: $xxl) {
     %container {
         max-width: 1146px;
     }
 }
+
 a,
 a:link,
 a:visited {
     color: white;
 }
+
 a:hover {
     color: white;
 }
@@ -56,10 +64,12 @@ a:hover {
 a {
     text-decoration: none;
 }
+
 /** nav
     nav
     nav
 **/
+
 .nav {
     display: block;
     z-index: 333;
@@ -69,9 +79,11 @@ a {
     position: fixed;
     width: 100%;
 }
+
 .nav__container {
     @extend %container;
 }
+
 .nav__brand {
     color: white;
     padding-top: 8px;
@@ -81,6 +93,7 @@ a {
     display: flex;
     justify-content: flex-start;
 }
+
 .nav__hamburger {
     width: 30px;
     height: 30px;
@@ -101,6 +114,7 @@ a {
     right: 5px;
     z-index: 34;
 }
+
 .nav__hamburger::after,
 .nav__hamburger::before {
     content: '';
@@ -112,9 +126,11 @@ a {
     transform: translateY(5px);
     transition: 0.15s transform linear;
 }
+
 .nav__hamburger::after {
     transform: translateY(15px);
 }
+
 .nav__list {
     color: white;
     width: 100%;
@@ -125,11 +141,13 @@ a {
     height: 0;
     display: none;
 }
+
 .nav__list--active {
     transform: translateX(0);
     display: block;
     height: 150px;
 }
+
 .nav__item {
     text-align: center;
     font-size: 3em;
@@ -151,6 +169,7 @@ a {
     header
     header
 **/
+
 .header {
     background-color: #87509c;
     padding-top: 120px;
@@ -161,6 +180,7 @@ a {
 .header__container {
     @extend %container;
 }
+
 %h1 {
     font-size: 3.5em;
     line-height: 130%;
@@ -173,25 +193,27 @@ a {
     font-weight: bolder;
     padding-top: 30px;
 }
+
 %h3 {
     font-size: 2.9em;
     line-height: 130%;
-    font-weight: 400;
+    font-weight: 500;
     padding-top: 30px;
 }
+
 %h4 {
     font-size: 2.6em;
     line-height: 130%;
     font-weight: 400;
     padding-top: 30px;
 }
+
 %h5 {
     font-size: 2.4em;
     line-height: 130%;
     font-weight: 300;
     padding-top: 30px;
 }
-%h6 {}
 
 %hr {
     height: 4px;
@@ -202,6 +224,7 @@ a {
     margin-top: 22px;
     margin-bottom: 22px;
 }
+
 %btn {
     height: 66px;
     font-size: 1.5em;
@@ -216,21 +239,25 @@ a {
     max-width: 293px;
     line-height: 66px;
 }
+
 .header__h1 {
     @extend %h1;
     text-align: center;
     color: white;
 }
+
 .header__button {
     @extend %btn;
     margin-top: 60px;
     background-color: #eb7d4b;
     color: white;
 }
+
 /** abt
     abt
     abt
 **/
+
 .abt {
     background-color: #17c2a4;
     color: white;
@@ -249,10 +276,12 @@ a {
     @extend %h2;
     text-align: center;
 }
+
 /** services
     services
     services
 **/
+
 .abt__h3 {
     @extend %h3;
     text-align: center;
@@ -269,10 +298,12 @@ a {
 .abt__hr {
     @extend %hr;
 }
+
 /** skills
     skills
     skills
 **/
+
 .skls {
     background-color: #d74680;
     color: white;
@@ -289,8 +320,13 @@ a {
     text-align: center;
 }
 
+@import "icons.scss";
 .devicon,
-.fa {
+.icon-lightbulb-o,
+.icon-compass,
+.icon-power,
+.icon-flag,
+.icon-embed2 {
     font-size: 98px;
     display: flex;
     justify-content: center;
@@ -330,8 +366,6 @@ a {
 .skls__item {
     margin-bottom: 15px;
 }
-
-
 
 /** portfolio
     portfolio
@@ -435,6 +469,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 input[type=text],
 input[type=email] {
     width: 100%;
@@ -447,10 +482,12 @@ input[type=email] {
     background-color: #273a71;
     text-indent: 26px;
 }
+
 input::placeholder,
 textarea::placeholder {
     color: white;
 }
+
 button[type=submit] {
     @extend %btn;
     background-color: #30bae7;
@@ -462,6 +499,7 @@ button[type=submit] {
     box-shadow: 0 4px #299ec5;
     margin-top: 16px;
 }
+
 .cntc__textarea {
     font-size: 1.6em;
     background-color: #273a71;
@@ -474,30 +512,36 @@ button[type=submit] {
     color: white;
     border: none;
 }
+
 /** footer
     footer
     footer
 **/
+
 .footer {
     min-height: 60px;
     background-color: #344b8e;
     padding-bottom: 6px;
 }
+
 .footer__container {
     @extend %container-fluid;
 }
+
 .footer__list {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #344b8e;
 }
+
 .footer__link {
     margin-top: 22px;
     text-align: center;
     font-size: 2.2em;
     background-color: #344b8e
 }
+
 //grids
 @media screen and(min-width:$md) {
     .abt__grid {
@@ -524,6 +568,7 @@ button[type=submit] {
         margin-left: 14px
     }
 }
+
 @media screen and (min-width:$lg) {
     .abt__grid {
         flex-direction: row;
@@ -543,6 +588,7 @@ button[type=submit] {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (min-width:$xl) {
     .nav__hamburger {
         display: none;
@@ -583,7 +629,9 @@ button[type=submit] {
         width: 50%;
     }
 }
+
 @media (min-width:$xxl) {}
+
 ::selection {
     background-color: #643a79;
     color: white;
