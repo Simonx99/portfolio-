@@ -150,7 +150,7 @@ a {
 
 .nav__item {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.6em;
     border-bottom: 1px solid white;
     width: 100%;
 }
@@ -234,7 +234,7 @@ a {
     display: block;
     border-radius: 3px;
     border: none;
-    box-shadow: 0 4px #c86a40;
+
     min-width: 200px;
     max-width: 293px;
     line-height: 66px;
@@ -250,6 +250,7 @@ a {
     @extend %btn;
     margin-top: 60px;
     background-color: #eb7d4b;
+    box-shadow: 0 4px #c86a40;
     color: white;
 }
 
@@ -270,6 +271,7 @@ a {
 .abt__grid {
     display: flex;
     flex-direction: column;
+    padding-bottom: 28px;
 }
 
 .abt__h2 {
@@ -285,6 +287,7 @@ a {
 .abt__h3 {
     @extend %h3;
     text-align: center;
+    margin-bottom: 48px;
 }
 
 .abt__h4 {
@@ -292,7 +295,9 @@ a {
 }
 
 .abt__description {
-    @extend %h4;
+    @extend %h5;
+    min-height: 170px;
+    padding: 10px;
 }
 
 .abt__hr {
@@ -330,6 +335,7 @@ a {
     font-size: 98px;
     display: flex;
     justify-content: center;
+    color: #87509c;
 }
 
 .fa-code {
@@ -341,6 +347,7 @@ a {
     text-align: center;
     color: #3c4761;
     color: white;
+   
 }
 
 .skls__hr {
@@ -355,15 +362,18 @@ a {
 .skls__h5 {
     @extend %h5;
     color: white;
+    padding: 10px;
 }
-
+.skls__description{@extend %h5; padding: 10px;}
 .skls__grid {
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: 48px;
+    padding-bottom: 46px;
 }
 
 .skls__item {
+    
     margin-bottom: 15px;
 }
 
@@ -401,7 +411,7 @@ a {
 
 .prt__description {
     @extend %h4;
-    text-align: center;
+    text-align: center; padding: 10px;
 }
 
 .prt__hr {
@@ -532,14 +542,14 @@ button[type=submit] {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #344b8e;
+
 }
 
 .footer__link {
     margin-top: 22px;
     text-align: center;
     font-size: 2.2em;
-    background-color: #344b8e
+
 }
 
 //grids
@@ -581,11 +591,15 @@ button[type=submit] {
     .skls__item {
         width: 50%;
     }
-    .abt__item {
-        width: auto;
-    }
+    .abt__item {}
     .prt__grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .prt__item:first-child {
+        margin-right: 5px;
+    }
+    .prt__item:last-child {
+        margin-left: 5px;
     }
 }
 
@@ -629,8 +643,6 @@ button[type=submit] {
         width: 50%;
     }
 }
-
-@media (min-width:$xxl) {}
 
 ::selection {
     background-color: #643a79;
