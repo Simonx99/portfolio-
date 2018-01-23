@@ -8,3 +8,16 @@ function navOpen() {
         console.log('nav open');
     }
 }
+function validate() {
+    var x = document.forms["form"]["_replyto"].value;
+    if (x == "") {
+        alert("Mógłbyś uzupełnić formularz ? ;)"); // wiem ze nie powinno sie uzywac polskich znakow
+        return false;
+    }
+    
+    
+    
+    
+    
+    
+}
