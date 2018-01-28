@@ -61,6 +61,7 @@ a {
     nav
     nav
 **/
+
 .nav {
   display: block;
   z-index: 333;
@@ -165,6 +166,7 @@ a {
     header
     header
 **/
+
 .header {
   min-height: 65vh;
   padding-top: 120px;
@@ -252,6 +254,7 @@ a {
     abt
     abt
 **/
+
 .abt {
   background-color: #17c2a4;
   color: white;
@@ -275,6 +278,7 @@ a {
     services
     services
 **/
+
 .abt__h3 {
   @extend %h3;
   text-align: center;
@@ -283,6 +287,8 @@ a {
 
 .abt__h4 {
   @extend %h4;
+  text-align: center;
+  font-size: 3em;
 }
 
 .abt__description {
@@ -298,6 +304,7 @@ a {
     skills
     skills
 **/
+
 .skls {
   background-color: #d74680;
   color: white;
@@ -326,9 +333,12 @@ a {
   font-size: 98px;
   color: #87509c;
 }
-.skls .icon-embed2,.devicon{
+
+.devicon,
+.skls .icon-embed2 {
   color: #17c2a4;
 }
+
 .fa-code {
   font-size: 20px;
 }
@@ -376,6 +386,7 @@ a {
     portfolio
     portfolio
 **/
+
 .prt {
   background-color: #ffdd99;
   padding-bottom: 60px;
@@ -422,6 +433,7 @@ a {
 
 .prt__item {
   margin: 1px;
+  margin-bottom: 60px;
 }
 
 .prt__img {
@@ -526,6 +538,7 @@ textarea:focus {
     footer
     footer
 **/
+
 .footer {
   min-height: 60px;
   padding-bottom: 6px;
@@ -662,7 +675,9 @@ textarea:focus {
     min-height: 25vh;
   }
 }
-
+@media (max-width: $md){
+  .cntc__span{display: block;}
+}
 ::selection {
   background-color: #643a79;
   color: white;
