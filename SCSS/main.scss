@@ -61,7 +61,6 @@ a {
     nav
     nav
 **/
-
 .nav {
   display: block;
   z-index: 333;
@@ -166,7 +165,6 @@ a {
     header
     header
 **/
-
 .header {
   min-height: 65vh;
   padding-top: 120px;
@@ -254,7 +252,6 @@ a {
     abt
     abt
 **/
-
 .abt {
   background-color: #17c2a4;
   color: white;
@@ -278,7 +275,6 @@ a {
     services
     services
 **/
-
 .abt__h3 {
   @extend %h3;
   text-align: center;
@@ -304,7 +300,6 @@ a {
     skills
     skills
 **/
-
 .skls {
   background-color: #d74680;
   color: white;
@@ -386,7 +381,6 @@ a {
     portfolio
     portfolio
 **/
-
 .prt {
   background-color: #ffdd99;
   padding-bottom: 60px;
@@ -432,8 +426,7 @@ a {
 }
 
 .prt__item {
-  margin: 1px;
-  margin-bottom: 60px;
+  margin: 1px 1px 60px;
 }
 
 .prt__img {
@@ -538,7 +531,6 @@ textarea:focus {
     footer
     footer
 **/
-
 .footer {
   min-height: 60px;
   padding-bottom: 6px;
@@ -593,11 +585,6 @@ textarea:focus {
   }
 }
 @media screen and (min-width:$lg) {
-  .abt__grid {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
   .skls__grid {
     flex-direction: row;
     flex-wrap: wrap;
@@ -606,8 +593,6 @@ textarea:focus {
   .skls__item {
     width: 50%;
   }
-
-  .abt__item {}
 
   .prt__grid {
     grid-template-columns: 1fr 1fr;
@@ -622,6 +607,11 @@ textarea:focus {
   }
 }
 @media (min-width:$xl) {
+  .abt__grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   .nav__hamburger {
     display: none;
   }
@@ -675,9 +665,12 @@ textarea:focus {
     min-height: 25vh;
   }
 }
-@media (max-width: $md){
-  .cntc__span{display: block;}
+@media (max-width: $md) {
+  .cntc__span {
+    display: block;
+  }
 }
+
 ::selection {
   background-color: #643a79;
   color: white;
