@@ -61,7 +61,6 @@ a {
     nav
     nav
 **/
-
 .nav {
   display: block;
   z-index: 333;
@@ -133,18 +132,23 @@ a {
   top: 0;
   height: 0;
   color: white;
+  transition: height 2s linear;
 }
 
 .nav__list--active {
   display: block;
-  transform: translateX(0);
-  height: 150px;
+  height: auto;
 }
 
 .nav__item {
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #17c2a4;
+  box-shadow: 4px 4px #138a75;
   text-align: center;
-  border-bottom: 2px solid white;
   font-size: 2.6em;
 }
 
@@ -161,9 +165,8 @@ a {
     header
     header
 **/
-
 .header {
-  min-height: 60vh;
+  min-height: 65vh;
   padding-top: 120px;
   padding-bottom: 60px;
   background-color: #87509c;
@@ -249,7 +252,6 @@ a {
     abt
     abt
 **/
-
 .abt {
   background-color: #17c2a4;
   color: white;
@@ -273,7 +275,6 @@ a {
     services
     services
 **/
-
 .abt__h3 {
   @extend %h3;
   text-align: center;
@@ -297,7 +298,6 @@ a {
     skills
     skills
 **/
-
 .skls {
   background-color: #d74680;
   color: white;
@@ -326,7 +326,9 @@ a {
   font-size: 98px;
   color: #87509c;
 }
-
+.skls .icon-embed2,.devicon{
+  color: #17c2a4;
+}
 .fa-code {
   font-size: 20px;
 }
@@ -345,6 +347,8 @@ a {
 .skls__h4 {
   @extend %h4;
   color: white;
+  text-align: center;
+  font-size: 3em;
 }
 
 .skls__h5 {
@@ -372,7 +376,6 @@ a {
     portfolio
     portfolio
 **/
-
 .prt {
   background-color: #ffdd99;
   padding-bottom: 60px;
@@ -397,6 +400,8 @@ a {
 .prt__h4 {
   @extend %h4;
   text-align: center;
+  font-weight: 600;
+  color: #925d44;
 }
 
 .prt__description {
@@ -479,7 +484,8 @@ input[type=text] {
   border-radius: 2px;
   border: none;
   text-indent: 26px;
-  font-size: 1.6em;font-weight: normal;
+  font-size: 1.6em;
+  font-weight: normal;
   background-color: #273a71;
   color: white;
 }
@@ -520,7 +526,6 @@ textarea:focus {
     footer
     footer
 **/
-
 .footer {
   min-height: 60px;
   padding-bottom: 6px;
@@ -630,6 +635,8 @@ textarea:focus {
     padding-left: 12px;
     padding-right: 12px;
     border: none;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   a.nav__link {
@@ -648,6 +655,11 @@ textarea:focus {
 
   .footer__link {
     width: 50%;
+  }
+}
+@media (min-width: $xxl) {
+  .header {
+    min-height: 25vh;
   }
 }
 
