@@ -479,7 +479,7 @@ input[type=text] {
   border-radius: 2px;
   border: none;
   text-indent: 26px;
-  font-size: 1.6em;
+  font-size: 1.6em;font-weight: normal;
   background-color: #273a71;
   color: white;
 }
@@ -507,6 +507,7 @@ button[type=submit] {
   font-family: 'Titillium Web', sans-serif;
   text-indent: 26px;
   font-size: 1.6em;
+  font-weight: normal;
   color: white;
   background-color: #273a71;
 }
